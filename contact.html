@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NimbleIQ Marketing Science Consulting</title>
+    <meta name="description" content="Get in touch with NimbleIQ for marketing science consulting. Book a consultation or send us a message about your measurement challenges.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "NimbleIQ",
+            "description": "Marketing Science Consulting"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">NimbleIQ</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Case Studies</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="contact.html" class="nav-link cta-button">Book Consultation</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p class="page-subtitle">Ready to turn your data into confident budget decisions? Let's discuss your measurement challenges.</p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card primary">
+                    <div class="contact-icon">📅</div>
+                    <h3>Book a Consultation</h3>
+                    <p>Schedule a 30-minute consultation to discuss your specific measurement challenges and explore how we can help.</p>
+                    <div class="contact-action">
+                        <button class="btn-primary" onclick="openCalendlyModal()">Schedule Now</button>
+                        <p class="contact-note">Free 30-minute consultation</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Send a Message</h3>
+                    <p>Have questions or want to discuss a specific project? Send us a message and we'll get back to you within 24 hours.</p>
+                    <div class="contact-action">
+                        <a href="#contact-form" class="btn-outline">Send Message</a>
+                        <p class="contact-note">Response within 24 hours</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📄</div>
+                    <h3>Download Resources</h3>
+                    <p>Get our free MMM Readiness Checklist and learn how to assess your measurement capabilities.</p>
+                    <div class="contact-action">
+                        <a href="index.html#lead-magnet" class="btn-outline">Get Checklist</a>
+                        <p class="contact-note">Free download, no strings attached</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-intro">
+                    <h2>Tell Us About Your Project</h2>
+                    <p>The more details you provide, the better we can tailor our response to your specific needs.</p>
+                    
+                    <div class="response-commitment">
+                        <div class="commitment-item">
+                            <span class="commitment-icon">⚡</span>
+                            <span>24-hour response guarantee</span>
+                        </div>
+                        <div class="commitment-item">
+                            <span class="commitment-icon">🔒</span>
+                            <span>Confidential and secure</span>
+                        </div>
+                        <div class="commitment-item">
+                            <span class="commitment-icon">🎯</span>
+                            <span>Tailored recommendations</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Work Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Job Title</label>
+                            <input type="text" id="title" name="title">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mediaSpend">Annual Media Spend (Optional)</label>
+                        <select id="mediaSpend" name="mediaSpend">
+                            <option value="">Select range</option>
+                            <option value="under-1m">Under $1M</option>
+                            <option value="1m-10m">$1M - $10M</option>
+                            <option value="10m-50m">$10M - $50M</option>
+                            <option value="50m-150m">$50M - $150M</option>
+                            <option value="over-150m">Over $150M</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="challenge">Primary Challenge *</label>
+                        <select id="challenge" name="challenge" required>
+                            <option value="">Select your main challenge</option>
+                            <option value="performance-assessment">Is this performance good?</option>
+                            <option value="budget-allocation">When do we shift spend?</option>
+                            <option value="kpi-understanding">What's moving the KPI right now?</option>
+                            <option value="scaling-analytics">How do we scale our analytics?</option>
+                            <option value="mmm-setup">Need MMM implementation</option>
+                            <option value="event-measurement">Event/campaign measurement</option>
+                            <option value="segmentation">Customer segmentation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="urgency">Timeline</label>
+                        <select id="urgency" name="urgency">
+                            <option value="">When do you need results?</option>
+                            <option value="asap">ASAP (within 4 weeks)</option>
+                            <option value="quarter">This quarter</option>
+                            <option value="planning">Planning for next year</option>
+                            <option value="exploring">Just exploring options</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us more about your specific challenges, current measurement setup, decision deadlines, and what success looks like for your team." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            I'd like to receive occasional insights about marketing measurement and decision science
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary large">Send Message</button>
+                    
+                    <p class="privacy-note">
+                        We respect your privacy. Your information will never be shared with third parties. 
+                        <a href="privacy.html">View our privacy policy</a>.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly can you start?</h3>
+                    <p>For our signature solutions, we typically begin within 1-2 weeks of contract signing. Urgent projects can often be accommodated with faster start times.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you work with agencies?</h3>
+                    <p>Yes! We partner with agencies that need specialist MMM, incrementality testing, and analytics automation expertise for their clients.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What data do you need access to?</h3>
+                    <p>This varies by project, but typically includes media spend data, performance metrics, and any existing measurement assets. We work within your security requirements.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can you work with our existing tools?</h3>
+                    <p>Absolutely. We adapt to your current tech stack and can work with most major platforms including BigQuery, Snowflake, Tableau, Looker, and more.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What's included in the consultation?</h3>
+                    <p>A 30-minute discussion about your challenges, current measurement setup, and potential solutions. No sales pitch—just valuable insights you can use regardless.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer training for our team?</h3>
+                    <p>Yes, all our engagements include knowledge transfer and training to ensure your team can maintain and build upon our work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make Data-Driven Decisions?</h2>
+                <p>Join marketing teams who've transformed their measurement capabilities with NimbleIQ.</p>
+                <button class="btn-primary large" onclick="openCalendlyModal()">Book Free Consultation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendly Modal Placeholder -->
+    <div id="calendly-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeCalendlyModal()">&times;</span>
+            <h2>Schedule Your Consultation</h2>
+            <p>This is a placeholder for Calendly integration. In the full implementation, this would open a Calendly scheduling widget.</p>
+            <div class="calendly-placeholder">
+                <p><strong>What to expect:</strong></p>
+                <ul>
+                    <li>30-minute discussion about your challenges</li>
+                    <li>Assessment of your current measurement setup</li>
+                    <li>Tailored recommendations for next steps</li>
+                    <li>No pressure sales—just valuable insights</li>
+                </ul>
+                <button class="btn-primary" onclick="simulateBooking()">Book Time Slot</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>NimbleIQ</h3>
+                    <p>Marketing Science Consulting for confident budget decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Spend Sensemaker™</a></li>
+                        <li><a href="services.html">Event Impact Now™</a></li>
+                        <li><a href="services.html">MMM Reboot™</a></li>
+                        <li><a href="services.html">Segmentation to Activation™</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#lead-magnet">MMM Readiness Checklist</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NimbleIQ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Calendly Modal Functions (Placeholder)
+        function openCalendlyModal() {
+            document.getElementById('calendly-modal').style.display = 'block';
+            // Track event
+            if (window.NimbleIQ) {
+                window.NimbleIQ.trackEvent('calendly_modal_open', 'engagement', 'consultation_booking');
+            }
+        }
+        
+        function closeCalendlyModal() {
+            document.getElementById('calendly-modal').style.display = 'none';
+        }
+        
+        function simulateBooking() {
+            alert('Thank you! In the full implementation, this would connect to your actual Calendly account to book a consultation.');
+            closeCalendlyModal();
+            // Track conversion
+            if (window.NimbleIQ) {
+                window.NimbleIQ.trackEvent('consultation_booking', 'conversion', 'calendly_placeholder');
+            }
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('calendly-modal');
+            if (event.target === modal) {
+                closeCalendlyModal();
+            }
+        }
+    </script>
+</body>
+</html>
+
+<style>
+/* Additional styles for contact page */
+.contact-methods {
+    padding: var(--space-16) 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-8);
+}
+
+.contact-card {
+    background-color: var(--white);
+    padding: var(--space-8);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    box-shadow: var(--box-shadow-lg);
+    transform: translateY(-2px);
+}
+
+.contact-card.primary {
+    border: 2px solid var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--white);
+}
+
+.contact-card.primary h3,
+.contact-card.primary p {
+    color: var(--white);
+}
+
+.contact-icon {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-4);
+}
+
+.contact-action {
+    margin-top: var(--space-6);
+}
+
+.contact-note {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin-top: var(--space-2);
+    margin-bottom: 0;
+}
+
+.contact-card.primary .contact-note {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-form-section {
+    background-color: var(--gray-50);
+    padding: var(--space-20) 0;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    align-items: start;
+}
+
+.form-intro h2 {
+    margin-bottom: var(--space-4);
+}
+
+.response-commitment {
+    margin-top: var(--space-8);
+}
+
+.commitment-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.commitment-icon {
+    font-size: var(--font-size-lg);
+}
+
+.contact-form {
+    background-color: var(--white);
+    padding: var(--space-8);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-weight: var(--font-medium);
+    color: var(--gray-700);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-3);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    margin: var(--space-8) 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.faq-section {
+    padding: var(--space-20) 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-8);
+}
+
+.faq-item {
+    background-color: var(--white);
+    padding: var(--space-6);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-lg);
+}
+
+.faq-item p {
+    margin-bottom: 0;
+    color: var(--gray-600);
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: var(--space-8);
+    border-radius: var(--border-radius-lg);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    right: var(--space-4);
+    top: var(--space-4);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-bold);
+    color: var(--gray-400);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close:hover {
+    color: var(--gray-700);
+}
+
+.calendly-placeholder {
+    background-color: var(--gray-50);
+    padding: var(--space-6);
+    border-radius: var(--border-radius);
+    margin: var(--space-6) 0;
+}
+
+.calendly-placeholder ul {
+    margin: var(--space-4) 0;
+}
+
+.calendly-placeholder li {
+    margin-bottom: var(--space-2);
+    color: var(--gray-600);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+    }
+}
+</style>

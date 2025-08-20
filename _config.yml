@@ -1,0 +1,84 @@
+# Jekyll Configuration for GitHub Pages
+
+# Site settings
+title: "NimbleIQ - Marketing Science Consulting"
+description: "We help marketing teams turn noisy data into confident budget decisions using modern measurement delivered fast by senior experts."
+url: "https://nimbleiq.github.io"
+baseurl: "/website"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - documents/
+
+# Include files
+include:
+  - .htaccess
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# SEO settings
+author: "NimbleIQ"
+twitter:
+  username: nimbleiq
+  card: summary_large_image
+
+# Social media
+social:
+  name: NimbleIQ
+  links:
+    - https://github.com/NimbleIQ
+
+# Analytics (add when ready)
+# google_analytics: UA-XXXXXXXX-X
+
+# Contact information
+email: contact@nimbleiq.com
+phone: "+1 (555) 123-4567"
+
+# Company information
+company:
+  name: "NimbleIQ"
+  legal_name: "NimbleIQ LLC"
+  founded: 2024
+  address: "Your Business Address"
+  
+# Services
+services:
+  - "Media Mix Modeling"
+  - "Event Measurement"
+  - "Customer Segmentation"
+  - "Decision Science"
+
+# Timezone
+timezone: America/New_York
