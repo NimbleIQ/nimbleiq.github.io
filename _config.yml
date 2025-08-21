@@ -4,7 +4,7 @@
 title: "NimbleIQ - Marketing Science Consulting"
 description: "We help marketing teams turn noisy data into confident budget decisions using modern measurement delivered fast by senior experts."
 url: "https://nimbleiq.github.io"
-baseurl: "/website"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
