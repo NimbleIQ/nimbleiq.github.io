@@ -36,16 +36,19 @@ NimbleIQ is a senior-level marketing science boutique focused on turning noisy d
    cd website
    ```
 
-2. Open `index.html` in your browser or use a local server:
+2. Use a local development server:
    ```bash
-   # Option 1: Python
-   python -m http.server 8000
+   # Recommended: Python (handles Jekyll permalinks correctly)
+   python3 -m http.server 8000
    
-   # Option 2: Node.js
-   npx serve
+   # Alternative: Node.js live-server (with hot reload)
+   npm install -g live-server
+   live-server --port=8000
    
-   # Option 3: PHP
+   # Alternative: PHP
    php -S localhost:8000
+   
+   # Note: Avoid basic 'npx serve' as it may cause asset path issues
    ```
 
 3. Visit `http://localhost:8000` to view the site
@@ -142,6 +145,34 @@ The contact forms are currently set up with placeholder functionality. To integr
 3. Test thoroughly across devices and browsers
 4. Create a pull request with detailed description
 5. Merge after review and testing
+
+## Troubleshooting
+
+### Common Development Issues
+
+**Asset Loading (404 errors on CSS/JS):**
+- ✅ Use `python3 -m http.server 8000` for development
+- ❌ Avoid `npx serve` which can cause URL redirect issues
+- All asset paths are absolute (`/assets/...`) for consistency
+
+**Jekyll Permalink Issues:**
+- Production site uses `permalink: pretty` (removes .html extensions)
+- Python server handles this correctly
+- Live site: https://nimbleiq.github.io
+
+**Favicon Not Loading:**
+- Favicon is at `/assets/images/icons/favicon.svg`
+- Uses absolute path for cross-browser compatibility
+- Clear browser cache if not updating
+
+### Development vs Production
+
+| Environment | URL Structure | Asset Paths |
+|-------------|---------------|-------------|
+| **Local** | `localhost:8000/contact.html` | `/assets/css/styles.css` |
+| **Production** | `nimbleiq.github.io/contact` | `/assets/css/styles.css` |
+
+Both environments use **absolute asset paths** for consistency.
 
 ## Support
 
